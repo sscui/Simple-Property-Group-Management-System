@@ -250,6 +250,16 @@
                             <th>维修时间</th>
                             <th>报修费用</th>
                         </tr>
+                        <tr>
+                            <td>report_id</td>
+                            <td>equip_id</td>
+                            <td>name</td>
+                            <td>type</td>
+                            <td>community_name</td>
+                            <td>manager_id</td>
+                            <td>time</td>
+                            <td>fee</td>
+                        </tr>
                         <c:forEach items="${repairs}" var="repair" varStatus="st">
                             <tr>
                                 <td>${repair.report_id}</td>
