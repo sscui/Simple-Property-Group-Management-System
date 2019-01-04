@@ -151,44 +151,32 @@
                     <div class="panel-heading">
                         <h3 class="panel-title">收入记录</h3>
                     </div>
-                    park_purchase 购买车位得到的钱
-                    temporary_park 临时停车得到的钱
-                    park_rent 车位租用获得的钱
-                    park_manage_pay 车位管理费获得的钱
-                    property_fee 物业费收入
-                    other_fee 其他收入
 
                     <table class="table table-striped table-bordered table-hover table-condensed">
                         <tr>
-                            <th>报修id</th>
-                            <th>设备id</th>
-                            <th>设备名称</th>
-                            <th>设备类型</th>
-                            <th>设备所在小区</th>
-                            <th>维修管理员id</th>
-                            <th>维修时间</th>
-                            <th>报修费用</th>
+                            <th>车位购买收入</th>
+                            <th>临时停车收入</th>
+                            <th>车位租用收入</th>
+                            <th>车位管理收入</th>
+                            <th>物业费收入</th>
+                            <th>其他收入</th>
                         </tr>
                         <tr>
-                            <td>report_id</td>
-                            <td>equip_id</td>
-                            <td>name</td>
-                            <td>type</td>
-                            <td>community_name</td>
-                            <td>manager_id</td>
-                            <td>time</td>
-                            <td>fee</td>
+                            <td>park_purchase</td>
+                            <td>temporary_park</td>
+                            <td>park_rent</td>
+                            <td>park_manage_pay</td>
+                            <td>property_fee</td>
+                            <td>other_fee</td>
                         </tr>
-                        <c:forEach items="${repairs}" var="repair" varStatus="st">
+                        <c:forEach items="${income}" var="aIncome" varStatus="st">
                             <tr>
-                                <td>${repair.report_id}</td>
-                                <td>${repair.equip_id}</td>
-                                <td>${repair.name}</td>
-                                <td>${repair.type}</td>
-                                <td>${repair.community_name}</td>
-                                <td>${repair.manager_id}</td>
-                                <td>${repair.time}</td>
-                                <td>${repair.fee}</td>
+                                <td>${aIncome.park_purchase}</td>
+                                <td>${aIncome.temporary_park}</td>
+                                <td>${aIncome.park_rent}</td>
+                                <td>${aIncome.park_manage_pay}</td>
+                                <td>${aIncome.property_fee}</td>
+                                <td>${aIncome.other_fee}</td>
                             </tr>
                         </c:forEach>
                     </table>
@@ -230,40 +218,19 @@
                         <h3 class="panel-title">支出记录</h3>
                     </div>
 
-                    check_fee 处理排查的维修费用
-                    repair_fee 处理报修的维修费用
-
                     <table class="table table-striped table-bordered table-hover table-condensed">
                         <tr>
-                            <th>报修id</th>
-                            <th>设备id</th>
-                            <th>设备名称</th>
-                            <th>设备类型</th>
-                            <th>设备所在小区</th>
-                            <th>维修管理员id</th>
-                            <th>维修时间</th>
-                            <th>报修费用</th>
+                            <th>排查维修费用</th>
+                            <th>报修维修费用</th>
                         </tr>
                         <tr>
-                            <td>report_id</td>
-                            <td>equip_id</td>
-                            <td>name</td>
-                            <td>type</td>
-                            <td>community_name</td>
-                            <td>manager_id</td>
-                            <td>time</td>
-                            <td>fee</td>
+                            <td>check_fee</td>
+                            <td>repair_fee</td>
                         </tr>
-                        <c:forEach items="${repairs}" var="repair" varStatus="st">
+                        <c:forEach items="${outcome}" var="aOutcome" varStatus="st">
                             <tr>
-                                <td>${repair.report_id}</td>
-                                <td>${repair.equip_id}</td>
-                                <td>${repair.name}</td>
-                                <td>${repair.type}</td>
-                                <td>${repair.community_name}</td>
-                                <td>${repair.manager_id}</td>
-                                <td>${repair.time}</td>
-                                <td>${repair.fee}</td>
+                                <td>${aOutcome.check_fee}</td>
+                                <td>${aOutcome.repair_fee}</td>
                             </tr>
                         </c:forEach>
                     </table>
